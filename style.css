@@ -1,0 +1,170 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+}
+
+/* HERO */
+
+header{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://upload.wikimedia.org/wikipedia/commons/6/63/Ural_mountains_bashkortostan.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+header h1{
+font-size:50px;
+margin-bottom:20px;
+animation:fadeDown 1s ease;
+}
+
+header p{
+font-size:20px;
+max-width:700px;
+}
+
+header a{
+margin-top:20px;
+padding:12px 25px;
+background:#2e8b57;
+color:white;
+text-decoration:none;
+border-radius:5px;
+transition:0.3s;
+}
+
+header a:hover{
+background:#256d46;
+transform:scale(1.05);
+}
+
+/* NAV */
+
+nav{
+background:#1e5631;
+position:sticky;
+top:0;
+z-index: 1;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+}
+
+nav li{
+margin:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+color:#1e5631;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#1e5631;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* ANIMATIONS */
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header h1{
+font-size:32px;
+}
+
+header p{
+font-size:16px;
+}
+
+}
